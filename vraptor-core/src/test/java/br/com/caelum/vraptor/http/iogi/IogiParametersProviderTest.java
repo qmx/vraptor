@@ -79,8 +79,8 @@ public class IogiParametersProviderTest {
 	private Localization mockLocalization;
 	private Validator mockValidator;
 
-    @SuppressWarnings("unchecked")
-    @Before
+    @SuppressWarnings("rawtypes")
+	@Before
     public void setup() throws Exception {
         this.mockery = new VRaptorMockery(true);
         this.converters = mockery.mock(Converters.class);
@@ -99,8 +99,6 @@ public class IogiParametersProviderTest {
             {
                 allowing(converters).to((Class) with(an(Class.class)));
                 will(returnValue(new LongConverter()));
-
-//                ignoring(mockLocalization);
             }
         });
 
