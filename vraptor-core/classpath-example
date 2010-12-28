@@ -88,7 +88,7 @@
 	<classpathentry kind="lib" path="lib/containers/guice/guice-multibindings-snapshot.jar"/>
 	<classpathentry kind="lib" path="lib/containers/guice/guice-snapshot.jar"/>
 	<classpathentry kind="lib" path="lib/containers/guice/javax.inject.jar"/>
-	<classpathentry kind="lib" path="lib/containers/guice/scannotation-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/mandatory/scannotation-1.0.2.jar"/>
 	<classpathentry kind="lib" path="lib/containers/picocontainer/picocontainer-2.8.jar"/>
 	<classpathentry kind="lib" path="lib/containers/picocontainer/scannotation-1.0.2.jar"/>
 	<classpathentry kind="lib" path="lib/containers/spring/aopalliance.jar"/>
