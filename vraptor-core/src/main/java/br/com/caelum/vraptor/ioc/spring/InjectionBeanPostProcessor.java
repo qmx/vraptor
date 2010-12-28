@@ -28,16 +28,10 @@ import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostP
  *
  * @author Fabio Kung
  */
+@SuppressWarnings("unchecked")
 class InjectionBeanPostProcessor extends AutowiredAnnotationBeanPostProcessor {
 
-
-    //  in case we are required to change the injection annotation:
-    //  public InjectionBeanPostProcessor() {
-    //      this.setAutowiredAnnotationType(In.class);
-    //  }
-
     @Override
-	@SuppressWarnings("unchecked")
 	public Constructor[] determineCandidateConstructors(Class beanClass, String beanName) throws BeansException {
         Constructor[] candidates = super.determineCandidateConstructors(beanClass, beanName);
         if (candidates == null) {
@@ -49,7 +43,6 @@ class InjectionBeanPostProcessor extends AutowiredAnnotationBeanPostProcessor {
         return candidates;
     }
 
-    @SuppressWarnings("unchecked")
 	private Constructor checkIfThereIsOnlyOneNonDefaultConstructor(Class beanClass) {
         Constructor[] constructors = beanClass.getDeclaredConstructors();
         if (constructors.length == 1) {
